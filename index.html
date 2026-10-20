@@ -202,6 +202,79 @@
   width:42px;height:42px;display:block;object-fit:cover;border-radius:12px;
   box-shadow:0 5px 16px rgba(70,100,245,.18);
 }
+  
+/* Mobile viewport overflow fix — desktop styles remain unchanged */
+@media (max-width: 720px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .nav-wrap,
+  main,
+  .hero,
+  .section,
+  .feature-section,
+  .quote-section,
+  .pricing-section,
+  .cta-section,
+  .faq-section,
+  .footer,
+  .container {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-width: 0;
+    overflow: clip;
+  }
+
+  .orbit {
+    max-width: 100%;
+  }
+
+  .note-top {
+    right: 0;
+  }
+
+  .note-bottom {
+    left: 0;
+  }
+
+  .hero-bottomline {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .ticker {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .ticker-track {
+    width: max-content;
+    max-width: none;
+  }
+
+  img,
+  video,
+  iframe,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -311,8 +384,6 @@
             <li><a href="#features">Features</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="quiz.html">Self-Assessment Quiz</a></li>
-            <li><a href="join.html">Early Access</a></li>
           </ul>
         </div>
 
@@ -322,7 +393,7 @@
           <ul class="footer-links-list">
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html#story">Founder Story</a></li>
+            <li><a href="about.html#story">Founder's story</a></li>
           </ul>
         </div>
 
